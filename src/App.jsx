@@ -1,11 +1,11 @@
 import React from 'react';
-import {FormFormik} from './components/FormFormik';
+import {RouterScreen}from './components/Router'
 
 export const App = () => {
   return (
     <div>
-      <h1>App Screen</h1>
-      <FormFormik />
+
+      < RouterScreen />
     </div>
   )
 }

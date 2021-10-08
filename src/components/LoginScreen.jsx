@@ -1,9 +1,10 @@
 import { Formik,Form,Field,ErrorMessage } from "formik";
 import { useEffect,useState } from "react";
+import { Link }from 'react-router-dom'
 import validator from 'validator';
 import { fetchLogin } from "../helpers/fetchAuth";
 
-export  const FormFormik = () => {
+export  const LoginScreen = () => {
 
     const [submitValues,setSubmitValues]=useState({});
 
@@ -39,7 +40,7 @@ export  const FormFormik = () => {
 
                 }}
             >
-                {({errors,touched}) => (
+                {({errors}) => (
                     <>  
                
                         <Form>
@@ -58,10 +59,11 @@ export  const FormFormik = () => {
                             <ErrorMessage name="password" component={()=>(<p>{errors.password}</p>)}/>
                             <button type="submit">Submit</button>
                         </Form>
-                    
+                        
                     </>
                 )}
             </Formik>
+            <Link to='/register'>Register</Link>
         </>
     )
 }
