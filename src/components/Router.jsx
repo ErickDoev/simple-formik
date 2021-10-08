@@ -2,12 +2,12 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
 } from 'react-router-dom'
 import {LoginScreen} from './LoginScreen';
 import {RegisterScreen} from './RegisterScreen';
 import {DashboardScreen} from './DashboardScreen';
 import { NotFound404 } from './NotFound404';
+import { SearchScreen } from './SearchScreen';
 
 export const RouterScreen = () => {
     return (
@@ -18,18 +18,23 @@ export const RouterScreen = () => {
 
                     <Route 
                         exact
+                        path='/'
+                        component={DashboardScreen}/>
+                    <Route 
+                        
                         path='/login'
                         component={LoginScreen}/>
 
                     <Route 
-                        exact 
+                        
                         path='/register'
                         component={RegisterScreen}/>
 
+            
                     <Route 
-                        exact
-                        path='/'
-                        component={DashboardScreen}/>
+                        
+                        path='/search/:id'
+                        component={SearchScreen}/>
 
                     <Route
                         path='*'
@@ -40,3 +45,4 @@ export const RouterScreen = () => {
         </div>
     )
 }
+
