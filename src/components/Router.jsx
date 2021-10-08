@@ -8,6 +8,7 @@ import {RegisterScreen} from './RegisterScreen';
 import {DashboardScreen} from './DashboardScreen';
 import { NotFound404 } from './NotFound404';
 import { SearchScreen } from './SearchScreen';
+import { QueryString } from './QueryString';
 
 export const RouterScreen = () => {
     return (
@@ -35,6 +36,11 @@ export const RouterScreen = () => {
                         
                         path='/search/:id'
                         component={SearchScreen}/>
+
+                    <Route 
+                        
+                        path='/query'
+                        component={QueryString}/>
 
                     <Route
                         path='*'
