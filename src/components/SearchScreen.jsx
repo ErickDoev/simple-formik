@@ -1,12 +1,14 @@
-import {useParams}from 'react-router-dom'
+import { useParams } from "react-router-dom"
 
 export const SearchScreen = () => {
 
-
-    const { id } = useParams()
+    const params = useParams();
+    console.log(params);
     return (
         <div>
-            <p>{id}</p>
+            <h1>Search Screen</h1>
+
+
         </div>
     )
 }

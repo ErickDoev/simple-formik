@@ -9,6 +9,7 @@ import {DashboardScreen} from './DashboardScreen';
 import { NotFound404 } from './NotFound404';
 import { SearchScreen } from './SearchScreen';
 import { QueryString } from './QueryString';
+import { ListaApp } from './ListaApp';
 
 export const RouterScreen = () => {
     return (
@@ -34,13 +35,18 @@ export const RouterScreen = () => {
             
                     <Route 
                         
-                        path='/search/:id'
+                        path='/search/:pto&&:id'
                         component={SearchScreen}/>
 
                     <Route 
                         
                         path='/query'
                         component={QueryString}/>
+                    
+                    <Route 
+                        
+                        path='/lista'
+                        component={ListaApp}/>
 
                     <Route
                         path='*'
@@ -51,4 +57,3 @@ export const RouterScreen = () => {
         </div>
     )
 }
-
