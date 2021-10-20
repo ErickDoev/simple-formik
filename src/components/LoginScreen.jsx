@@ -3,17 +3,18 @@ import { useEffect,useState } from "react";
 import { Link }from 'react-router-dom'
 import validator from 'validator';
 import { fetchLogin } from "../helpers/fetchAuth";
+import {Button} from './styles/Button';
 
 export  const LoginScreen = () => {
 
     const [submitValues,setSubmitValues]=useState({});
 
-    useEffect(()=>{
-        fetchLogin(submitValues)
-        .then((resp)=>{
-            console.log(resp);
-        })
-    },[submitValues])
+    // useEffect(()=>{
+    //     fetchLogin(submitValues)
+    //     .then((resp)=>{
+    //         console.log(resp);
+    //     })
+    // },[submitValues])
     
     return(
         <>
@@ -57,7 +58,7 @@ export  const LoginScreen = () => {
                                 name="password"
                             />
                             <ErrorMessage name="password" component={()=>(<p>{errors.password}</p>)}/>
-                            <button type="submit">Submit</button>
+                            <Button type="submit">Submit</Button>
                         </Form>
                         
                     </>
